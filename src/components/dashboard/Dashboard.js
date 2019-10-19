@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Navbar from '../navbar/Navbar';
+import ScheduleBox from '../scheduleBox/ScheduleBox';
 
 class Dashboard extends Component {
 
@@ -9,9 +10,15 @@ class Dashboard extends Component {
             <div className="ph6">
                 <div className="fl w-100">
                     <Navbar text='Schedule' />
-                    <div className="f1">
+                    <div className="f3 bg-white pt3 pb3 pl5">
                         Dashboard
                     </div>
+                    <ScheduleBox />
+                    <ScheduleBox />
+                    <ScheduleBox />
+                    <ScheduleBox />
+                    <ScheduleBox />
+                    <ScheduleBox />
                 </div>
             </div>
         );
