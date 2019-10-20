@@ -7,18 +7,21 @@ class Dashboard extends Component {
 
     state = {
         matchType: 'All',
-        status: 'upcoming'
+        status: 'upcoming',
+        refetch: false,
     };
 
     manageFilters = (e) => {
         console.log(e.target.id);
+        const { refetch } = this.state;
         this.setState({
             [e.target.title]: e.target.id,
+            refetch: !refetch,
         });
     }
 
     render() {
-        const { matchType, status } = this.state;
+        const { matchType, status, refetch } = this.state;
         return (
             <div className="ph2">
                 <div className="w-100">
@@ -42,6 +45,7 @@ class Dashboard extends Component {
                     <Matches 
                         matchType={matchType}
                         status={status}
+                        refetch={refetch}
                     />
                 </div>
             </div>
