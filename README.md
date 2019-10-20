@@ -8,7 +8,7 @@ To Run the project, follow the steps
 2. Change directory into the project directory with cd command.
 3. Use yarn install or npm install to install the node modules.
 4. After installing the node modules, do yarn start or npm start to run the project.
-5. The app will run in http://localhost:3000 in the browser.
+5. The app will run in http://localhost:3000 port in the browser.
 6. Enjoy!
 
 Create React App Instructions
