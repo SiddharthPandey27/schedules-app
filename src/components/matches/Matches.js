@@ -7,10 +7,14 @@ import ScheduleBox from '../scheduleBox/ScheduleBox';
 class Matches extends Component {
 
     render() {
+        const { matchType, status } = this.props;
+        console.log(matchType);
+        console.log(status);
+
         return (
             <Query
                 query={gql`{
-                    schedule(type: "all", status: "upcoming", page: 0) {
+                    schedule {
                         matchType
                         seriesName
                         matchID
@@ -27,6 +31,7 @@ class Matches extends Component {
                         }
                     }
                 }`}
+                variables={{ type: matchType, status: status, page: 0 }}
             >
                 {({ loading, error, data }) => {
                     if (loading) return <p>Loading...</p>;

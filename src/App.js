@@ -13,7 +13,6 @@ const client = new ApolloClient({
 class App extends Component {
 
   render() {
-    console.log(client);
     return (
       <ApolloProvider client={client}>
         <BrowserRouter>
