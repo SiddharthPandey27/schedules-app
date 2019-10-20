@@ -12,7 +12,6 @@ class Dashboard extends Component {
     };
 
     manageFilters = (e) => {
-        console.log(e.target.id);
         const { refetch } = this.state;
         this.setState({
             [e.target.title]: e.target.id,
