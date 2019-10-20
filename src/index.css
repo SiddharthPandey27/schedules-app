@@ -15,10 +15,6 @@ code {
     monospace;
 }
 
-.nav-bar {
-  margin: 20px 0;
-}
-
-.heading-text {
-  text-decoration: none;
+.pos-sticky {
+  position: sticky;
 }

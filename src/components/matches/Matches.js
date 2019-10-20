@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Query, ApolloConsumer } from 'react-apollo';
-import gql from 'graphql-tag';
 
 import ScheduleBox from '../scheduleBox/ScheduleBox';
 
@@ -39,6 +37,7 @@ class Matches extends Component {
                                 matchStatus
                                 matchNumber
                                 matchResult
+                                toss
                                 matchScore {
                                     teamID
                                     teamFullName
@@ -50,7 +49,7 @@ class Matches extends Component {
                             }
                         }`,
                         variables: {
-                            type: this.props.matchtype,
+                            type: this.props.matchType,
                             status: this.props.status,
                             page: 0
                         },
@@ -87,8 +86,6 @@ class Matches extends Component {
     render() {
         const { matchType, status } = this.props;
         const { loading, data, error } = this.state;
-        console.log(matchType);
-        console.log(status);
 
         if (error) return <p>Error! {error.message}</p>
 
